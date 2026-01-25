@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		860C18FC2F2628C100541EFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 860C18E32F2628C000541EFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 860C18EA2F2628C000541EFF;
+			remoteInfo = "Mythic Path Collection Arcade";
+		};
+		860C19062F2628C100541EFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 860C18E32F2628C000541EFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 860C18EA2F2628C000541EFF;
+			remoteInfo = "Mythic Path Collection Arcade";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		860C18EB2F2628C000541EFF /* Mythic Path Collection Arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mythic Path Collection Arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		860C18FB2F2628C100541EFF /* Mythic Path Collection ArcadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mythic Path Collection ArcadeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		860C19052F2628C100541EFF /* Mythic Path Collection ArcadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mythic Path Collection ArcadeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		860C18ED2F2628C000541EFF /* Mythic Path Collection Arcade */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Mythic Path Collection Arcade";
+			sourceTree = "<group>";
+		};
+		860C18FE2F2628C100541EFF /* Mythic Path Collection ArcadeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Mythic Path Collection ArcadeTests";
+			sourceTree = "<group>";
+		};
+		860C19082F2628C100541EFF /* Mythic Path Collection ArcadeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Mythic Path Collection ArcadeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		860C18E82F2628C000541EFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		860C18F82F2628C100541EFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		860C19022F2628C100541EFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		860C18E22F2628C000541EFF = {
+			isa = PBXGroup;
+			children = (
+				860C18ED2F2628C000541EFF /* Mythic Path Collection Arcade */,
+				860C18FE2F2628C100541EFF /* Mythic Path Collection ArcadeTests */,
+				860C19082F2628C100541EFF /* Mythic Path Collection ArcadeUITests */,
+				860C18EC2F2628C000541EFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		860C18EC2F2628C000541EFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				860C18EB2F2628C000541EFF /* Mythic Path Collection Arcade.app */,
+				860C18FB2F2628C100541EFF /* Mythic Path Collection ArcadeTests.xctest */,
+				860C19052F2628C100541EFF /* Mythic Path Collection ArcadeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		860C18EA2F2628C000541EFF /* Mythic Path Collection Arcade */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 860C190F2F2628C100541EFF /* Build configuration list for PBXNativeTarget "Mythic Path Collection Arcade" */;
+			buildPhases = (
+				860C18E72F2628C000541EFF /* Sources */,
+				860C18E82F2628C000541EFF /* Frameworks */,
+				860C18E92F2628C000541EFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				860C18ED2F2628C000541EFF /* Mythic Path Collection Arcade */,
+			);
+			name = "Mythic Path Collection Arcade";
+			packageProductDependencies = (
+			);
+			productName = "Mythic Path Collection Arcade";
+			productReference = 860C18EB2F2628C000541EFF /* Mythic Path Collection Arcade.app */;
+			productType = "com.apple.product-type.application";
+		};
+		860C18FA2F2628C100541EFF /* Mythic Path Collection ArcadeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 860C19122F2628C100541EFF /* Build configuration list for PBXNativeTarget "Mythic Path Collection ArcadeTests" */;
+			buildPhases = (
+				860C18F72F2628C100541EFF /* Sources */,
+				860C18F82F2628C100541EFF /* Frameworks */,
+				860C18F92F2628C100541EFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				860C18FD2F2628C100541EFF /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				860C18FE2F2628C100541EFF /* Mythic Path Collection ArcadeTests */,
+			);
+			name = "Mythic Path Collection ArcadeTests";
+			packageProductDependencies = (
+			);
+			productName = "Mythic Path Collection ArcadeTests";
+			productReference = 860C18FB2F2628C100541EFF /* Mythic Path Collection ArcadeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		860C19042F2628C100541EFF /* Mythic Path Collection ArcadeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 860C19152F2628C100541EFF /* Build configuration list for PBXNativeTarget "Mythic Path Collection ArcadeUITests" */;
+			buildPhases = (
+				860C19012F2628C100541EFF /* Sources */,
+				860C19022F2628C100541EFF /* Frameworks */,
+				860C19032F2628C100541EFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				860C19072F2628C100541EFF /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				860C19082F2628C100541EFF /* Mythic Path Collection ArcadeUITests */,
+			);
+			name = "Mythic Path Collection ArcadeUITests";
+			packageProductDependencies = (
+			);
+			productName = "Mythic Path Collection ArcadeUITests";
+			productReference = 860C19052F2628C100541EFF /* Mythic Path Collection ArcadeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		860C18E32F2628C000541EFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					860C18EA2F2628C000541EFF = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					860C18FA2F2628C100541EFF = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 860C18EA2F2628C000541EFF;
+					};
+					860C19042F2628C100541EFF = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 860C18EA2F2628C000541EFF;
+					};
+				};
+			};
+			buildConfigurationList = 860C18E62F2628C000541EFF /* Build configuration list for PBXProject "Mythic Path Collection Arcade" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 860C18E22F2628C000541EFF;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 860C18EC2F2628C000541EFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				860C18EA2F2628C000541EFF /* Mythic Path Collection Arcade */,
+				860C18FA2F2628C100541EFF /* Mythic Path Collection ArcadeTests */,
+				860C19042F2628C100541EFF /* Mythic Path Collection ArcadeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		860C18E92F2628C000541EFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		860C18F92F2628C100541EFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		860C19032F2628C100541EFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		860C18E72F2628C000541EFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		860C18F72F2628C100541EFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		860C19012F2628C100541EFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		860C18FD2F2628C100541EFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 860C18EA2F2628C000541EFF /* Mythic Path Collection Arcade */;
+			targetProxy = 860C18FC2F2628C100541EFF /* PBXContainerItemProxy */;
+		};
+		860C19072F2628C100541EFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 860C18EA2F2628C000541EFF /* Mythic Path Collection Arcade */;
+			targetProxy = 860C19062F2628C100541EFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		860C190D2F2628C100541EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		860C190E2F2628C100541EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		860C19102F2628C100541EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mythic Path Collection Arcade/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Mythic-Path-Collection-Arcade";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		860C19112F2628C100541EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mythic Path Collection Arcade/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Mythic-Path-Collection-Arcade";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		860C19132F2628C100541EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Mythic-Path-Collection-ArcadeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mythic Path Collection Arcade.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mythic Path Collection Arcade";
+			};
+			name = Debug;
+		};
+		860C19142F2628C100541EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Mythic-Path-Collection-ArcadeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mythic Path Collection Arcade.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mythic Path Collection Arcade";
+			};
+			name = Release;
+		};
+		860C19162F2628C100541EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Mythic-Path-Collection-ArcadeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mythic Path Collection Arcade";
+			};
+			name = Debug;
+		};
+		860C19172F2628C100541EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Mythic-Path-Collection-ArcadeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mythic Path Collection Arcade";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		860C18E62F2628C000541EFF /* Build configuration list for PBXProject "Mythic Path Collection Arcade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				860C190D2F2628C100541EFF /* Debug */,
+				860C190E2F2628C100541EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		860C190F2F2628C100541EFF /* Build configuration list for PBXNativeTarget "Mythic Path Collection Arcade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				860C19102F2628C100541EFF /* Debug */,
+				860C19112F2628C100541EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		860C19122F2628C100541EFF /* Build configuration list for PBXNativeTarget "Mythic Path Collection ArcadeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				860C19132F2628C100541EFF /* Debug */,
+				860C19142F2628C100541EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		860C19152F2628C100541EFF /* Build configuration list for PBXNativeTarget "Mythic Path Collection ArcadeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				860C19162F2628C100541EFF /* Debug */,
+				860C19172F2628C100541EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 860C18E32F2628C000541EFF /* Project object */;
+}
