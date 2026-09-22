@@ -5,6 +5,7 @@ import AppTrackingTransparency
 private enum AdjustStorage {
     static let attribution = "lastAdjustAttribution"
     static let idfa = "idfa"
+    static let unavailableIDFA = "00000000-0000-0000-0000-000000000000"
 }
 
 final class AdjustAttributionHandler: NSObject, AdjustDelegate {
@@ -29,9 +30,9 @@ final class AdjustAttributionHandler: NSObject, AdjustDelegate {
 
 enum AdjustIntegration {
     @MainActor
-    static func requestTrackingPermissionAndWaitForIDFA(upToSeconds seconds: Int = 5) async -> String? {
+    static func requestTrackingPermissionAndWaitForIDFA(upToSeconds seconds: Int = 5) async -> String {
         guard #available(iOS 14.5, *) else {
-            return storeValidIDFA(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
+            return storeIDFA(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
         }
 
         let currentStatus = ATTrackingManager.trackingAuthorizationStatus
@@ -43,37 +44,31 @@ enum AdjustIntegration {
             status = UInt(currentStatus.rawValue)
         }
 
-        guard status == UInt(ATTrackingManager.AuthorizationStatus.authorized.rawValue) else {
-            UserDefaults.standard.removeObject(forKey: AdjustStorage.idfa)
-            return nil
-        }
-
-        for _ in 0..<(seconds * 4) {
-            if let idfa = storeValidIDFA(ASIdentifierManager.shared().advertisingIdentifier.uuidString) {
-                return idfa
+        if status == UInt(ATTrackingManager.AuthorizationStatus.authorized.rawValue) {
+            for _ in 0..<(seconds * 4) {
+                let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+                if idfa != AdjustStorage.unavailableIDFA && !idfa.isEmpty {
+                    return storeIDFA(idfa)
+                }
+                try? await Task.sleep(nanoseconds: 250_000_000)
             }
-            try? await Task.sleep(nanoseconds: 250_000_000)
         }
 
-        UserDefaults.standard.removeObject(forKey: AdjustStorage.idfa)
-        return nil
+        return storeIDFA(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
     }
 
-    static func storedIDFA() -> String? {
-        guard let idfa = UserDefaults.standard.string(forKey: AdjustStorage.idfa) else {
-            return nil
+    static func storedIDFA() -> String {
+        if let idfa = UserDefaults.standard.string(forKey: AdjustStorage.idfa), !idfa.isEmpty {
+            return idfa
         }
-        return validIDFA(idfa) ? idfa : nil
+        return storeIDFA(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
     }
 
-    private static func storeValidIDFA(_ idfa: String) -> String? {
-        guard validIDFA(idfa) else { return nil }
-        UserDefaults.standard.set(idfa, forKey: AdjustStorage.idfa)
-        return idfa
-    }
-
-    private static func validIDFA(_ idfa: String) -> Bool {
-        !idfa.isEmpty && idfa != "00000000-0000-0000-0000-000000000000"
+    @discardableResult
+    private static func storeIDFA(_ idfa: String) -> String {
+        let value = idfa.isEmpty ? AdjustStorage.unavailableIDFA : idfa
+        UserDefaults.standard.set(value, forKey: AdjustStorage.idfa)
+        return value
     }
 
     static func adid() async -> String {

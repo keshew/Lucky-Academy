@@ -104,12 +104,7 @@ struct Loading: View {
         pendingTrackingPermission = false
         didSet = true
 
-        guard await AdjustIntegration.requestTrackingPermissionAndWaitForIDFA() != nil else {
-            isLoading = false
-            isCont = true
-            return
-        }
-
+        _ = await AdjustIntegration.requestTrackingPermissionAndWaitForIDFA()
         await decodePropInfo()
         if managerKey == nil {
             isLoading = false
@@ -264,7 +259,7 @@ extension Loading {
         
         let fcmToken = UserDefaults.standard.string(forKey: "fcmToken") ?? "null"
         let adjustId = await AdjustIntegration.adid()
-        guard let idfa = AdjustIntegration.storedIDFA() else { return }
+        let idfa = AdjustIntegration.storedIDFA()
         let queryItems: [URLQueryItem] = [
             URLQueryItem(name: "firebase_push_token", value: fcmToken),
             URLQueryItem(name: "adjust_id", value: adjustId),
@@ -358,7 +353,7 @@ extension Loading {
         let clientId = UserDefaults.standard.string(forKey: "client_id") ?? "1"
         let fcmToken = UserDefaults.standard.string(forKey: "fcmToken") ?? "null"
         let adjustId = await AdjustIntegration.adid()
-        guard let idfa = AdjustIntegration.storedIDFA() else { return }
+        let idfa = AdjustIntegration.storedIDFA()
         
         let queryItems: [URLQueryItem] = [
             URLQueryItem(name: "client_id", value: clientId),
