@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		86354F8E2F2B9E3200F8F5FA /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 86354F8D2F2B9E3200F8F5FA /* FirebaseCore */; };
+		86354F902F2B9E3200F8F5FA /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 86354F8F2F2B9E3200F8F5FA /* FirebaseMessaging */; };
+		86AD00012F70000100AD0001 /* AdjustSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 86AD00032F70000100AD0001 /* AdjustSdk */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		860C18FC2F2628C100541EFF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		860C18EB2F2628C000541EFF /* Mythic Path Collection Arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mythic Path Collection Arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		860C18FB2F2628C100541EFF /* Mythic Path Collection ArcadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mythic Path Collection ArcadeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		860C19052F2628C100541EFF /* Mythic Path Collection ArcadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mythic Path Collection ArcadeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		860C18EB2F2628C000541EFF /* Lucky Academy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lucky Academy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		860C18FB2F2628C100541EFF /* Lucky AcademyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lucky AcademyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		860C19052F2628C100541EFF /* Lucky AcademyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lucky AcademyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86354F912F2B9E4600F8F5FA /* Lucky Prism Vault.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Lucky Prism Vault.entitlements"; sourceTree = "<group>"; };
+		86354F922F2B9E4B00F8F5FA /* Lucky-Prism-Vault-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Lucky-Prism-Vault-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86AD00012F70000100AD0001 /* AdjustSdk in Frameworks */,
+				86354F902F2B9E3200F8F5FA /* FirebaseMessaging in Frameworks */,
+				86354F8E2F2B9E3200F8F5FA /* FirebaseCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +86,8 @@
 		860C18E22F2628C000541EFF = {
 			isa = PBXGroup;
 			children = (
+				86354F922F2B9E4B00F8F5FA /* Lucky-Prism-Vault-Info.plist */,
+				86354F912F2B9E4600F8F5FA /* Lucky Prism Vault.entitlements */,
 				860C18ED2F2628C000541EFF /* Mythic Path Collection Arcade */,
 				860C18FE2F2628C100541EFF /* Mythic Path Collection ArcadeTests */,
 				860C19082F2628C100541EFF /* Mythic Path Collection ArcadeUITests */,
@@ -85,9 +98,9 @@
 		860C18EC2F2628C000541EFF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				860C18EB2F2628C000541EFF /* Mythic Path Collection Arcade.app */,
-				860C18FB2F2628C100541EFF /* Mythic Path Collection ArcadeTests.xctest */,
-				860C19052F2628C100541EFF /* Mythic Path Collection ArcadeUITests.xctest */,
+				860C18EB2F2628C000541EFF /* Lucky Academy.app */,
+				860C18FB2F2628C100541EFF /* Lucky AcademyTests.xctest */,
+				860C19052F2628C100541EFF /* Lucky AcademyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		860C18EA2F2628C000541EFF /* Mythic Path Collection Arcade */ = {
+		860C18EA2F2628C000541EFF /* Lucky Academy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 860C190F2F2628C100541EFF /* Build configuration list for PBXNativeTarget "Mythic Path Collection Arcade" */;
+			buildConfigurationList = 860C190F2F2628C100541EFF /* Build configuration list for PBXNativeTarget "Lucky Academy" */;
 			buildPhases = (
 				860C18E72F2628C000541EFF /* Sources */,
 				860C18E82F2628C000541EFF /* Frameworks */,
@@ -110,16 +123,19 @@
 			fileSystemSynchronizedGroups = (
 				860C18ED2F2628C000541EFF /* Mythic Path Collection Arcade */,
 			);
-			name = "Mythic Path Collection Arcade";
+			name = "Lucky Academy";
 			packageProductDependencies = (
+				86AD00032F70000100AD0001 /* AdjustSdk */,
+				86354F8D2F2B9E3200F8F5FA /* FirebaseCore */,
+				86354F8F2F2B9E3200F8F5FA /* FirebaseMessaging */,
 			);
 			productName = "Mythic Path Collection Arcade";
-			productReference = 860C18EB2F2628C000541EFF /* Mythic Path Collection Arcade.app */;
+			productReference = 860C18EB2F2628C000541EFF /* Lucky Academy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		860C18FA2F2628C100541EFF /* Mythic Path Collection ArcadeTests */ = {
+		860C18FA2F2628C100541EFF /* Lucky AcademyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 860C19122F2628C100541EFF /* Build configuration list for PBXNativeTarget "Mythic Path Collection ArcadeTests" */;
+			buildConfigurationList = 860C19122F2628C100541EFF /* Build configuration list for PBXNativeTarget "Lucky AcademyTests" */;
 			buildPhases = (
 				860C18F72F2628C100541EFF /* Sources */,
 				860C18F82F2628C100541EFF /* Frameworks */,
@@ -133,16 +149,16 @@
 			fileSystemSynchronizedGroups = (
 				860C18FE2F2628C100541EFF /* Mythic Path Collection ArcadeTests */,
 			);
-			name = "Mythic Path Collection ArcadeTests";
+			name = "Lucky AcademyTests";
 			packageProductDependencies = (
 			);
 			productName = "Mythic Path Collection ArcadeTests";
-			productReference = 860C18FB2F2628C100541EFF /* Mythic Path Collection ArcadeTests.xctest */;
+			productReference = 860C18FB2F2628C100541EFF /* Lucky AcademyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		860C19042F2628C100541EFF /* Mythic Path Collection ArcadeUITests */ = {
+		860C19042F2628C100541EFF /* Lucky AcademyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 860C19152F2628C100541EFF /* Build configuration list for PBXNativeTarget "Mythic Path Collection ArcadeUITests" */;
+			buildConfigurationList = 860C19152F2628C100541EFF /* Build configuration list for PBXNativeTarget "Lucky AcademyUITests" */;
 			buildPhases = (
 				860C19012F2628C100541EFF /* Sources */,
 				860C19022F2628C100541EFF /* Frameworks */,
@@ -156,11 +172,11 @@
 			fileSystemSynchronizedGroups = (
 				860C19082F2628C100541EFF /* Mythic Path Collection ArcadeUITests */,
 			);
-			name = "Mythic Path Collection ArcadeUITests";
+			name = "Lucky AcademyUITests";
 			packageProductDependencies = (
 			);
 			productName = "Mythic Path Collection ArcadeUITests";
-			productReference = 860C19052F2628C100541EFF /* Mythic Path Collection ArcadeUITests.xctest */;
+			productReference = 860C19052F2628C100541EFF /* Lucky AcademyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +202,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 860C18E62F2628C000541EFF /* Build configuration list for PBXProject "Mythic Path Collection Arcade" */;
+			buildConfigurationList = 860C18E62F2628C000541EFF /* Build configuration list for PBXProject "Lucky Academy" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -195,14 +211,18 @@
 			);
 			mainGroup = 860C18E22F2628C000541EFF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				86AD00022F70000100AD0001 /* XCRemoteSwiftPackageReference "ios_sdk" */,
+				86354F8C2F2B9E3200F8F5FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 860C18EC2F2628C000541EFF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				860C18EA2F2628C000541EFF /* Mythic Path Collection Arcade */,
-				860C18FA2F2628C100541EFF /* Mythic Path Collection ArcadeTests */,
-				860C19042F2628C100541EFF /* Mythic Path Collection ArcadeUITests */,
+				860C18EA2F2628C000541EFF /* Lucky Academy */,
+				860C18FA2F2628C100541EFF /* Lucky AcademyTests */,
+				860C19042F2628C100541EFF /* Lucky AcademyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +278,12 @@
 /* Begin PBXTargetDependency section */
 		860C18FD2F2628C100541EFF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 860C18EA2F2628C000541EFF /* Mythic Path Collection Arcade */;
+			target = 860C18EA2F2628C000541EFF /* Lucky Academy */;
 			targetProxy = 860C18FC2F2628C100541EFF /* PBXContainerItemProxy */;
 		};
 		860C19072F2628C100541EFF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 860C18EA2F2628C000541EFF /* Mythic Path Collection Arcade */;
+			target = 860C18EA2F2628C000541EFF /* Lucky Academy */;
 			targetProxy = 860C19062F2628C100541EFF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -393,26 +413,36 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Lucky Prism Vault.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mythic Path Collection Arcade/Preview Content\"";
+				DEVELOPMENT_TEAM = S78SYGG73K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Lucky-Prism-Vault-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Lucky Academy";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to take photos and record videos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Mythic-Path-Collection-Arcade";
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.luckyprismvault;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -421,26 +451,36 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Lucky Prism Vault.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mythic Path Collection Arcade/Preview Content\"";
+				DEVELOPMENT_TEAM = S78SYGG73K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Lucky-Prism-Vault-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Lucky Academy";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to take photos and record videos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Mythic-Path-Collection-Arcade";
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.luckyprismvault;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -458,7 +498,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mythic Path Collection Arcade.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mythic Path Collection Arcade";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lucky Academy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Lucky Academy";
 			};
 			name = Debug;
 		};
@@ -476,7 +516,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mythic Path Collection Arcade.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mythic Path Collection Arcade";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lucky Academy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Lucky Academy";
 			};
 			name = Release;
 		};
@@ -515,7 +555,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		860C18E62F2628C000541EFF /* Build configuration list for PBXProject "Mythic Path Collection Arcade" */ = {
+		860C18E62F2628C000541EFF /* Build configuration list for PBXProject "Lucky Academy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				860C190D2F2628C100541EFF /* Debug */,
@@ -524,7 +564,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		860C190F2F2628C100541EFF /* Build configuration list for PBXNativeTarget "Mythic Path Collection Arcade" */ = {
+		860C190F2F2628C100541EFF /* Build configuration list for PBXNativeTarget "Lucky Academy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				860C19102F2628C100541EFF /* Debug */,
@@ -533,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		860C19122F2628C100541EFF /* Build configuration list for PBXNativeTarget "Mythic Path Collection ArcadeTests" */ = {
+		860C19122F2628C100541EFF /* Build configuration list for PBXNativeTarget "Lucky AcademyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				860C19132F2628C100541EFF /* Debug */,
@@ -542,7 +582,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		860C19152F2628C100541EFF /* Build configuration list for PBXNativeTarget "Mythic Path Collection ArcadeUITests" */ = {
+		860C19152F2628C100541EFF /* Build configuration list for PBXNativeTarget "Lucky AcademyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				860C19162F2628C100541EFF /* Debug */,
@@ -552,6 +592,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		86AD00022F70000100AD0001 /* XCRemoteSwiftPackageReference "ios_sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adjust/ios_sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		86354F8C2F2B9E3200F8F5FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		86AD00032F70000100AD0001 /* AdjustSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86AD00022F70000100AD0001 /* XCRemoteSwiftPackageReference "ios_sdk" */;
+			productName = AdjustSdk;
+		};
+		86354F8D2F2B9E3200F8F5FA /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86354F8C2F2B9E3200F8F5FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		86354F8F2F2B9E3200F8F5FA /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86354F8C2F2B9E3200F8F5FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 860C18E32F2628C000541EFF /* Project object */;
 }

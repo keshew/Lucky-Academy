@@ -1,9 +1,3 @@
-//
-//  Mythic_Path_Collection_ArcadeUITestsLaunchTests.swift
-//  Mythic Path Collection ArcadeUITests
-//
-//  Created by Артём Коротков on 25.01.2026.
-//
 
 import XCTest
 

@@ -1,9 +1,4 @@
-//
-//  Mythic_Path_Collection_ArcadeTests.swift
-//  Mythic Path Collection ArcadeTests
-//
-//  Created by Артём Коротков on 25.01.2026.
-//
+
 
 import XCTest
 @testable import Mythic_Path_Collection_Arcade
