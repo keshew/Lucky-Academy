@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct Loading: View {
+    @Environment(\.scenePhase) private var scenePhase
     @State var isMenu = false
     @State var managerKey: String? = nil
     let closeTaskPublisher = NotificationCenter.default
         .publisher(for: NSNotification.Name("closeTask"))
-    let tokenReceivedPublisher = NotificationCenter.default
-        .publisher(for: NSNotification.Name("tokenReceivedPublisher"))
     @State private var didSet = false
+    @State private var pendingTrackingPermission = false
     @State private var isLoading = true
     @State var isCont = false
     @State private var angle: Double = -6
@@ -62,19 +62,6 @@ struct Loading: View {
                 Spacer()
             }
         }
-        .onReceive(tokenReceivedPublisher) { _ in
-            if didSet { return }
-            didSet = true
-            
-            Task {
-                await AdjustIntegration.requestTrackingPermissionAndStoreIDFA()
-                await decodePropInfo()
-                if managerKey == nil {
-                    isLoading = false
-                    isCont = true
-                }
-            }
-        }
         .onReceive(closeTaskPublisher) { _ in
             Task {
                 await MainActor.run {
@@ -86,6 +73,20 @@ struct Loading: View {
             Task  {
                 try await fetchCharacter(from: (URL(string: gfdjhgkl) ?? URL(string: "http://google.com")!))
             }
+
+            guard !didSet else { return }
+            pendingTrackingPermission = true
+
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 500_000_000)
+                await startServerFlowAfterIDFAIfPossible()
+            }
+        }
+        .onChange(of: scenePhase) { newPhase in
+            guard newPhase == .active else { return }
+            Task { @MainActor in
+                await startServerFlowAfterIDFAIfPossible()
+            }
         }
         .fullScreenCover(isPresented: .constant(managerKey != nil)) {
             ApplDetail(managerKey: managerKey ?? "")
@@ -94,6 +95,25 @@ struct Loading: View {
         .fullScreenCover(isPresented: $isCont) {
             RootTabView()
                 .environmentObject(AppStore())
+        }
+    }
+
+    @MainActor
+    private func startServerFlowAfterIDFAIfPossible() async {
+        guard pendingTrackingPermission, !didSet, scenePhase == .active else { return }
+        pendingTrackingPermission = false
+        didSet = true
+
+        guard await AdjustIntegration.requestTrackingPermissionAndWaitForIDFA() != nil else {
+            isLoading = false
+            isCont = true
+            return
+        }
+
+        await decodePropInfo()
+        if managerKey == nil {
+            isLoading = false
+            isCont = true
         }
     }
 }
@@ -244,7 +264,7 @@ extension Loading {
         
         let fcmToken = UserDefaults.standard.string(forKey: "fcmToken") ?? "null"
         let adjustId = await AdjustIntegration.adid()
-        let idfa = UserDefaults.standard.string(forKey: "idfa") ?? ""
+        guard let idfa = AdjustIntegration.storedIDFA() else { return }
         let queryItems: [URLQueryItem] = [
             URLQueryItem(name: "firebase_push_token", value: fcmToken),
             URLQueryItem(name: "adjust_id", value: adjustId),
@@ -338,7 +358,7 @@ extension Loading {
         let clientId = UserDefaults.standard.string(forKey: "client_id") ?? "1"
         let fcmToken = UserDefaults.standard.string(forKey: "fcmToken") ?? "null"
         let adjustId = await AdjustIntegration.adid()
-        let idfa = UserDefaults.standard.string(forKey: "idfa") ?? ""
+        guard let idfa = AdjustIntegration.storedIDFA() else { return }
         
         let queryItems: [URLQueryItem] = [
             URLQueryItem(name: "client_id", value: clientId),

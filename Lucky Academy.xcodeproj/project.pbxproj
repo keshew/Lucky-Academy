@@ -415,7 +415,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Lucky Prism Vault.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Mythic Path Collection Arcade/Preview Content\"";
 				DEVELOPMENT_TEAM = S78SYGG73K;
 				ENABLE_PREVIEWS = YES;
@@ -453,7 +453,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Lucky Prism Vault.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Mythic Path Collection Arcade/Preview Content\"";
 				DEVELOPMENT_TEAM = S78SYGG73K;
 				ENABLE_PREVIEWS = YES;
@@ -594,14 +594,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		86AD00022F70000100AD0001 /* XCRemoteSwiftPackageReference "ios_sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/adjust/ios_sdk";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		86354F8C2F2B9E3200F8F5FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -610,14 +602,17 @@
 				minimumVersion = 12.8.0;
 			};
 		};
+		86AD00022F70000100AD0001 /* XCRemoteSwiftPackageReference "ios_sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adjust/ios_sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		86AD00032F70000100AD0001 /* AdjustSdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 86AD00022F70000100AD0001 /* XCRemoteSwiftPackageReference "ios_sdk" */;
-			productName = AdjustSdk;
-		};
 		86354F8D2F2B9E3200F8F5FA /* FirebaseCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 86354F8C2F2B9E3200F8F5FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -627,6 +622,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 86354F8C2F2B9E3200F8F5FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
+		};
+		86AD00032F70000100AD0001 /* AdjustSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86AD00022F70000100AD0001 /* XCRemoteSwiftPackageReference "ios_sdk" */;
+			productName = AdjustSdk;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
