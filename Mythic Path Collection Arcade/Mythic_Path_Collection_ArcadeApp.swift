@@ -49,12 +49,20 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         Adjust.initSdk(adjustConfig)
         
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UserDefaults.standard.set(false, forKey: "pushPermissionResolved")
         UNUserNotificationCenter.current().requestAuthorization(
             options: authOptions,
-            completionHandler: { _, _ in }
+            completionHandler: { _, _ in
+                DispatchQueue.main.async {
+                    application.registerForRemoteNotifications()
+                    UserDefaults.standard.set(true, forKey: "pushPermissionResolved")
+                    NotificationCenter.default.post(
+                        name: NSNotification.Name("pushPermissionResolvedPublisher"),
+                        object: nil
+                    )
+                }
+            }
         )
-        
-        application.registerForRemoteNotifications()
         
         return true
     }

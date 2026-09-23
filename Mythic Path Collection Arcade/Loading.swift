@@ -5,8 +5,8 @@ struct Loading: View {
     @State var managerKey: String? = nil
     let closeTaskPublisher = NotificationCenter.default
         .publisher(for: NSNotification.Name("closeTask"))
-    let tokenReceivedPublisher = NotificationCenter.default
-        .publisher(for: NSNotification.Name("tokenReceivedPublisher"))
+    let pushPermissionResolvedPublisher = NotificationCenter.default
+        .publisher(for: NSNotification.Name("pushPermissionResolvedPublisher"))
     @State private var didSet = false
     @State private var isLoading = true
     @State var isCont = false
@@ -62,17 +62,9 @@ struct Loading: View {
                 Spacer()
             }
         }
-        .onReceive(tokenReceivedPublisher) { _ in
-            guard !didSet else { return }
-            didSet = true
-
+        .onReceive(pushPermissionResolvedPublisher) { _ in
             Task { @MainActor in
-                _ = await AdjustIntegration.requestTrackingPermissionAndStoreIDFA()
-                await decodePropInfo()
-                if managerKey == nil {
-                    isLoading = false
-                    isCont = true
-                }
+                await startServerFlowAfterPermissions()
             }
         }
         .onReceive(closeTaskPublisher) { _ in
@@ -86,6 +78,12 @@ struct Loading: View {
             Task  {
                 try await fetchCharacter(from: (URL(string: gfdjhgkl) ?? URL(string: "http://google.com")!))
             }
+
+            if UserDefaults.standard.bool(forKey: "pushPermissionResolved") {
+                Task { @MainActor in
+                    await startServerFlowAfterPermissions()
+                }
+            }
         }
         .fullScreenCover(isPresented: .constant(managerKey != nil)) {
             ApplDetail(managerKey: managerKey ?? "")
@@ -94,6 +92,32 @@ struct Loading: View {
         .fullScreenCover(isPresented: $isCont) {
             RootTabView()
                 .environmentObject(AppStore())
+        }
+    }
+
+    @MainActor
+    private func startServerFlowAfterPermissions() async {
+        guard !didSet else { return }
+        didSet = true
+
+        _ = await AdjustIntegration.requestTrackingPermissionAndStoreIDFA()
+        await waitForFCMToken(upToSeconds: 5)
+        await decodePropInfo()
+
+        if managerKey == nil {
+            isLoading = false
+            isCont = true
+        }
+    }
+
+    private func waitForFCMToken(upToSeconds seconds: Int) async {
+        for _ in 0..<(seconds * 4) {
+            if let token = UserDefaults.standard.string(forKey: "fcmToken"),
+               !token.isEmpty,
+               token != "null" {
+                return
+            }
+            try? await Task.sleep(nanoseconds: 250_000_000)
         }
     }
 
