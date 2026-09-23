@@ -1,6 +1,7 @@
 import AdjustSdk
 import AdSupport
 import AppTrackingTransparency
+import UIKit
 
 private enum AdjustStorage {
     static let attribution = "lastAdjustAttribution"
@@ -30,6 +31,8 @@ final class AdjustAttributionHandler: NSObject, AdjustDelegate {
 enum AdjustIntegration {
     @MainActor
     static func requestTrackingPermissionAndStoreIDFA() async -> String {
+        await waitUntilApplicationIsActive()
+
         guard #available(iOS 14.5, *) else {
             return storeIDFA(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
         }
@@ -40,6 +43,19 @@ enum AdjustIntegration {
         }
 
         return storeIDFA(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
+    }
+
+    @MainActor
+    private static func waitUntilApplicationIsActive() async {
+        // Give the push-permission dialog time to appear before checking state.
+        try? await Task.sleep(nanoseconds: 500_000_000)
+
+        while UIApplication.shared.applicationState != .active {
+            try? await Task.sleep(nanoseconds: 100_000_000)
+        }
+
+        // Let the previous system dialog finish dismissing before requesting ATT.
+        try? await Task.sleep(nanoseconds: 300_000_000)
     }
 
     static func storedIDFA() -> String {
